@@ -6,13 +6,13 @@ session_start();
 if ($_POST){
 
 $price = $_POST['price'];                                              //Gets amount and pass to variable
-$url = "http://196.46.20.80:8085/CODE-ID";                           //URL to post data to. CHANGE CODE-ID TO YOUR MERCHANTID SENT VIA EMAIL
+$url = "http://196.46.20.80:8085/KHROMEPAY";                           //URL to post data to. CHANGE CODE-ID TO YOUR MERCHANTID SENT VIA EMAIL
 $content = json_encode(array( 
 	'Amount'    => $price,
 	'Fee' => 0,
 	'Currency'       => '566',
 	'Description' => 'Payment for Tshirts',
-	'ReturnUrl'      => 'http://localhost:/demo/response.php',                 //Rename return url accordingly
+	'ReturnUrl'      => 'https://payarena.herokuapp.com/response.php',                 //Rename return url accordingly
 	'SecretKey' => 'DF6FD65C0A393B359994BD51924C583BF366F2855977A6C3'      
     ));                                                               //Order request sent to CIPG
 
@@ -28,7 +28,7 @@ curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
 $redirectURL = curl_getinfo($curl,CURLINFO_EFFECTIVE_URL );             //Gets the response URL from CIPG server and stores in $redirectURL
 
-echo("is transid here: " . $redirectURL);
+echo("transid here is : " . $redirectURL);
 
 
 header( 'Location: ' . $redirectURL );                                 //Redirecting to PG for payment

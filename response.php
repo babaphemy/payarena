@@ -27,8 +27,8 @@ $scheme =  $data->{'Scheme'};
 $statusDescription =  $data->{'StatusDescription'};
 $approvalCode =  $data->{'Approval Code'};
 $transactionDate =  $data->{'TranDateTime'};
-$merchantName = ''; //Enter Your Business Name here. E.g. Unified Payment Services Limited
-$merchantUrl = ''; //Enter Your URL here. E.g www.payarena.com
+$merchantName = 'KhromePay'; //Enter Your Business Name here. E.g. Unified Payment Services Limited
+$merchantUrl = 'KHROMEPAY'; //Enter Your URL here. E.g www.payarena.com
 
  
  echo $orderId;
