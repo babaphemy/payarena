@@ -55,17 +55,14 @@ curl_close($curl);                                                     //Closes 
 								<div class="col-sm-12">
 									<div class="form-group">
 										<img src="assets/images/lap.jpg">   
-										<input type="text" class="form-control" id="contact-name" name="price" placeholder="Price*" value ="50000" required>
+										<input type="text" class="form-control" id="contact-name" name="price" placeholder="Price*" value ="60000" required>
 									</div>
-                                    <div class="form-group">
-                                        <label for="dem">Test</label>
-                                        <input type="text" id="dem" class="form-control" />
-                                    </div>
+
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-6">
-									<button id="" type="submit" class="btn btn-primary">  <span>Pay Out</span></button>
+									<button id="" type="submit" class="btn btn-primary">  <span>Checkout</span></button>
 								</div>
 							</div>
 						</form>
